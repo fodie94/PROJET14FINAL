@@ -192,7 +192,8 @@ function Accueil() {
         </form>
       </div>
 
-      <Modale2 visible={confirmationVisible} />
+      {/* Afficher la modale uniquement si confirmationVisible est true */}
+      {confirmationVisible && <Modale2 visible={confirmationVisible} />}
     </div>
   );
 }
