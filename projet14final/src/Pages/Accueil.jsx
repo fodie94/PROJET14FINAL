@@ -193,7 +193,10 @@ function Accueil() {
       </div>
 
       {/* Afficher la modale uniquement si confirmationVisible est true */}
-      {confirmationVisible && <Modale2 visible={confirmationVisible} />}
+      <Modale2
+        visible={confirmationVisible}
+        onClose={() => setConfirmationVisible(false)}
+      />
     </div>
   );
 }
