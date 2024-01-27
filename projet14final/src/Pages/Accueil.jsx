@@ -6,8 +6,10 @@ import { Modale2 } from "@fodieniakate/modalep14";
 import { Link } from "react-router-dom";
 import { addEmployee } from "../redux";
 
-import DatePicker from "react-date-picker";
-import "react-date-picker/dist/DatePicker.css";
+// import DatePicker from "react-date-picker";
+// import "react-date-picker/dist/DatePicker.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "react-calendar/dist/Calendar.css";
 //import { format } from "date-fns"; // Importez la fonction format de date-fns
 
@@ -123,19 +125,21 @@ function Accueil() {
           <label htmlFor="date-of-birth">Date of Birth</label>
           <DatePicker
             id="date-of-birth"
-            value={employeeData.dateOfBirth}
+            showIcon
+            selected={employeeData.dateOfBirth}
             onChange={(date) => handleDateChange("dateOfBirth", date)}
-            name="dateOfBirth"
-            className="custom-datepicker" // Ajoutez une classe pour personnaliser le style
+            dateFormat="dd/MM/yyyy"
+            className="custom-datepicker"
           />
 
           <label htmlFor="start-date">Start Date</label>
           <DatePicker
             id="start-date"
-            value={employeeData.startDate}
+            showIcon
+            selected={employeeData.startDate}
             onChange={(date) => handleDateChange("startDate", date)}
-            name="startDate"
-            className="custom-datepicker" // Ajoutez une classe pour personnaliser le style
+            dateFormat="dd/MM/yyyy"
+            className="custom-datepicker"
           />
 
           <fieldset className="address">
