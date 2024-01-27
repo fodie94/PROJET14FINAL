@@ -6,14 +6,11 @@ import { Modale2 } from "@fodieniakate/modalep14";
 import { Link } from "react-router-dom";
 import { addEmployee } from "../redux";
 
-// import DatePicker from "react-date-picker";
-// import "react-date-picker/dist/DatePicker.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "react-calendar/dist/Calendar.css";
-//import { format } from "date-fns"; // Importez la fonction format de date-fns
 
 import Select from "react-select";
+import "react-calendar/dist/Calendar.css";
 
 function Accueil() {
   const dispatch = useDispatch();
